@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa que mostra sugestões de números para Loteria</title>
+</head>
+<body>
+    <h1>Calcula Números Loteria em JavaScript</h1>
+    <h1>Programa para sugerir números da Loteria</h1>
+    <p>Esse programa vai mostrar seis sugestões de números aleatórios para jogar na loteria:</p> 
+    <input type="button" value="Mostrar sugestões" onclick="calcularLoteria()">
+    <div id="res">
+    </div>
+ 
+    <script>
+        function calcularLoteria() {
+            //var txtnum = window.document.getElementById('txtnumero')
+            //var num =Number(txtnum.value)
+            var res = window.document.getElementById('res')
+            //res.innerHTML = `<p>${num}</p>`
+            //var resultado = (num ** 2)
+            //res.innerHTML = `<p> Valores da Tabuada do ${num}: </p>`
+            res.innerHTML = `<p> Valores Sugeridos:</p>`
+            for (var i = 1; i <= 6; i++) {
+            var randomNumero = Math.floor((Math.random() * (100))+1);
+            //console.log(randomNumero)
+            
+                //var resultado = (i*num);
+            res.innerHTML += `<p>O número sugerido é: ${randomNumero}.</p>`
+            }
+        }
+    </script>
+</body>
+</html>
